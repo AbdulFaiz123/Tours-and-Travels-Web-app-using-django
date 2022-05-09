@@ -9,7 +9,7 @@ py -m pip install django
 py -m django --version
 
 mkdir projects
-py -m django startproject faiz
+py -m django startproject YOUR_PROJECT_NAME
 
 cd faiz
 
@@ -25,7 +25,7 @@ settings
 py manage.py collectstatic
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'faiz/static')
+    os.path.join(BASE_DIR,'YOUR_PROJECT_NAME/static')
 ]
 
  {%block content %}
@@ -40,12 +40,14 @@ py -m pip install cryptography
  'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'faiz',
+        
         'USER': 'root',
         'PASSWORD':'',
         'HOST': 'localhost',
         'PORT':'3306'
     }
-<!--    give your mysql password  -->
+    'faiz' = YOUR_DATABASE_NAME 
+  give your mysql password  
 
 in faiz/settings.py give your email id and password and make sure it is Dont forgot to allow access in google account ---->   accounts.google.com-->security->less secure app -->allow  this for sending verification mail
 
@@ -64,4 +66,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 py -m pip install windows-curses
 
 py manage.py runserver   
-<!-- to run the project use above command -->
+ to run the project use above command 
